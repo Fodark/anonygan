@@ -1,0 +1,1 @@
+zip -9 -r anonygan.zip . -x "*__pycache__*" -x "*lightning_logs*" -x "zip_this.sh" -x "*images*"

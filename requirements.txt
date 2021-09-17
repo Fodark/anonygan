@@ -1,0 +1,7 @@
+numpy==1.19.2
+pytorch-lightning
+scikit-image
+torch==1.8.1
+torchvision==0.9.1
+tqdm==4.60.0
+tensorboard==2.5.0
