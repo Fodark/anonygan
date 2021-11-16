@@ -1,1 +1,1 @@
-tar --exclude=**/__pycache__* --exclude=**/lightning_logs/* --exclude="./zip_this.sh" --exclude="./tar_this.sh" --exclude=**/images/* -pcvzf anonygan.tar.gz .
+tar --exclude=**/__pycache__ --exclude=**/lightning_logs --exclude=**/wandb --exclude="./zip_this.sh" --exclude="./tar_this.sh" --exclude="./anonygan.tar.gz" --exclude=**/images --exclude=**/None --exclude=**/output -pcvzf anonygan.tar.gz .
