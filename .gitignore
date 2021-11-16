@@ -162,4 +162,10 @@ cython_debug/
 
 lightning_logs
 images
+output
+None
+wandb
+
 *.pth
+.vscode
+ckpts

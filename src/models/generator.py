@@ -1,24 +1,25 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from einops import rearrange
 
 from .eca_layer import eca_layer
-
 from .utils_modules_new import *
-
-# from .utils_modules_old import *
 
 
 class Generator(nn.Module):
-    def __init__(self, ngf=64, n_blocks=6, n_downsampling=2):
+    def __init__(self, ngf=64, n_blocks=6, n_downsampling=2, ch_input=6, use_ch_att=True, reduced_landmarks=False):
         super(Generator, self).__init__()
-        self.input_nc_s1 = 2 * 3
-        self.input_nc_s2 = 2 * 68
+        
+        self.input_nc_s1 = ch_input
+        if reduced_landmarks:
+            self.input_nc_s2 = 2 * 29
+        else:
+            self.input_nc_s2 = 2 * 68
         self.output_nc = 3
         self.ngf = ngf
-
-        self.ch_att = eca_layer(2 * 68)
+        self.use_ch_att = use_ch_att
+        
+        if use_ch_att:
+            self.ch_att = eca_layer(2 * 68)
 
         # down_sample
         model_stream1_down = [
@@ -133,7 +134,10 @@ class Generator(nn.Module):
         # here x should be a tuple
         input_image, x2 = input
 
-        x2 = self.ch_att(x2)
+        if self.use_ch_att:
+            x2 = self.ch_att(x2)
+        
+        # print('I', input_image.shape, 'P', x2.shape)
 
         x1 = self.stream1_down(input_image)
         x2 = self.stream2_down(x2)
@@ -152,5 +156,8 @@ class Generator(nn.Module):
         att = att.repeat(1, 3, 1, 1)
         # att2 = att2.repeat(1, 3, 1, 1)
 
-        out = out * att + input_image[:, 3:] * (1 - att)
+        if self.input_nc_s1 == 6:
+            out = out * att + input_image[:, 3:] * (1 - att)
+        else:
+            out = out * att + input_image * (1 - att)
         return torch.clamp(out, -1, 1)  # torch.tanh(out)
