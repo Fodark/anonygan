@@ -37,18 +37,27 @@ Needed libraries are provided in the `requirements.txt` file.
 
 - Download aligned CelebA [here](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
 - Extract aligned version
-- Compute landmarks and mask with the code provided in ``
+- Compute landmarks and mask with the code provided in `preparation` (modify paths accordingly)
 
 ## Generating Images Using Pretrained Model
 
 - Download pretrained model [here](https://drive.google.com/file/d/1FWMaBIQfm1-1fLy0ZG7eu--VD91OipJP/view?usp=sharing)
 - Place it in `ckpts/anonygan.ckpt`
+- Preprocess your images with the files in `preparation`
+- Prepare a `.csv` files with columns `[from, to]` with condition and source images names
+- Run `test.sh` modifying paths accordingly
 
 ## Train and Test New Models
 
+- Same as using the pretrained model, for training modify `train.sh` accordingly
+
 ## Evaluation
 
+`evaluation/automatic_evaluation` is the entry point, modify paths accordingly
+
 ## Acknowledgments
+
+Graph reasoning inspired by [BiGraphGAN](https://github.com/Ha0Tang/BiGraphGAN)
 
 ## Citation
 
