@@ -35,7 +35,14 @@ Needed libraries are provided in the `requirements.txt` file.
 
 ## Dataset Preparation
 
+- Download aligned CelebA [here](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
+- Extract aligned version
+- Compute landmarks and mask with the code provided in ``
+
 ## Generating Images Using Pretrained Model
+
+- Download pretrained model [here](https://drive.google.com/file/d/1FWMaBIQfm1-1fLy0ZG7eu--VD91OipJP/view?usp=sharing)
+- Place it in `ckpts/anonygan.ckpt`
 
 ## Train and Test New Models
 
