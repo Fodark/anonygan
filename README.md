@@ -16,8 +16,8 @@
 ## AnonyGAN
 **| [Paper]() |** <br> 
 [**Graph-based Generative Face Anonymisation with Pose Preservation**]() <br> 
-[Nicola Dall'Asen]()<sup>123</sup>, [Yiming Wang]()<sup>3</sup>, [Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>14</sup>, [Luca Zanella]()<sup>3</sup>, [Elisa Ricci](http://elisaricci.eu)<sup>13</sup>. 
-<br><sup>1</sup>University of Trento, Italy, <sup>2</sup>University of Pisa, Italy, <sup>3</sup>Fondazione Bruno Kessler, Italy, <sup>4</sup>ETH Zürich, Switzerland.<br>
+[Nicola Dall'Asen]()<sup>12</sup>, [Yiming Wang]()<sup>3</sup>, [Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>4</sup>, [Luca Zanella]()<sup>3</sup>, [Elisa Ricci](http://elisaricci.eu)<sup>23</sup>. 
+<br><sup>1</sup>University of Pisa, Italy, <sup>2</sup>University of Trento, Italy, <sup>3</sup>Fondazione Bruno Kessler, Italy, <sup>4</sup>ETH Zürich, Switzerland.<br>
 In [ICIAP 2021](https://www.iciap2021.org). <br>
 The repository offers the official implementation of our paper in PyTorch.
 
