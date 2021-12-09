@@ -61,5 +61,16 @@ Graph reasoning inspired by [BiGraphGAN](https://github.com/Ha0Tang/BiGraphGAN)
 
 ## Citation
 
+If you use this code for your research, please consider giving a star and citing our paper!
+
+```
+@inproceedings{dallasen2021anonygan,
+  title={Graph-based Generative Face Anonymisation with Pose Preservation},
+  author={Dall'Asen, Nicola and Wang, Yiming and Tang, Hao and Zanella, Luca and Ricci, Elisa},
+  booktitle={International Conference on Image analysis and Processing},
+  year={2021}
+}
+```
+
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Nicola Dall'Asen ([nicola.dallasen@phd.unipi.it](nicola.dallasen@phd.unipi.it)). 
