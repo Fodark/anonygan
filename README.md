@@ -14,7 +14,7 @@
   - [Contributions](#Contributions)
 
 ## AnonyGAN
-**| [Paper]() |** <br> 
+**| [Paper](https://arxiv.org/abs/2112.05496) |** <br> 
 [**Graph-based Generative Face Anonymisation with Pose Preservation**]() <br> 
 [Nicola Dall'Asen]()<sup>12</sup>, [Yiming Wang]()<sup>3</sup>, [Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>4</sup>, [Luca Zanella]()<sup>3</sup>, [Elisa Ricci](http://elisaricci.eu)<sup>23</sup>. 
 <br><sup>1</sup>University of Pisa, Italy, <sup>2</sup>University of Trento, Italy, <sup>3</sup>Fondazione Bruno Kessler, Italy, <sup>4</sup>ETH Zürich, Switzerland.<br>
